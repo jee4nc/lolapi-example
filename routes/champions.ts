@@ -1,9 +1,8 @@
-import { Router, Request, Response } from "https://deno.land/x/oak/mod.ts";
+import { Router } from "https://deno.land/x/oak/mod.ts";
+import { getChampions } from "../controller/champions.ts";
 
 const router: Router = new Router();
 
-router.get("/champions", (ctx) => {
-  ctx.response.body = "Hello World!";
-});
+router.get("/champions", getChampions);
 
 export default router;
